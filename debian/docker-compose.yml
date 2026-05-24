@@ -53,13 +53,13 @@ services:
           "-p${MYSQL_PASSWORD}",
         ]
 
-  redis:
-    image: redis:alpine
-    restart: unless-stopped
-    volumes:
-      - redis_data:/data
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+  # redis:
+  #   image: redis:alpine
+  #   restart: unless-stopped
+  #   volumes:
+  #     - redis_data:/data
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
 
 volumes:
   app_public:
@@ -68,5 +68,5 @@ volumes:
     driver: local
   mysql_data:
     driver: local
-  redis_data:
-    driver: local
+  # redis_data:
+  #   driver: local

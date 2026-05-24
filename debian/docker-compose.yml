@@ -21,8 +21,8 @@ services:
   nginx:
     image: nginx:alpine
     restart: unless-stopped
-    ports:
-      - "8089:80"
+    #ports:
+    #  - "8089:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d:ro
       - app_public:/var/www/html/public:ro

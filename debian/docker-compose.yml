@@ -15,8 +15,8 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-      redis:
-        condition: service_healthy
+      # redis:
+      #   condition: service_healthy
 
   nginx:
     image: nginx:alpine
